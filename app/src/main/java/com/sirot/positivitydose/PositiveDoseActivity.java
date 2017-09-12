@@ -1,13 +1,21 @@
 package com.sirot.positivitydose;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-public class PositiveDoseActivity extends AppCompatActivity {
+import android.os.Bundle;
+import android.support.v4.app.Fragment;
+
+public class PositiveDoseActivity extends SingleFragmentActivity {
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_positive_dose);
+        setContentView(R.layout.activity_fragment);
     }
+
+    @Override
+    protected Fragment createFragment() {
+        return new PositiveDoseFragment();
+    }
+
+
 }
